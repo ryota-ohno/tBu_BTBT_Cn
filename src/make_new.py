@@ -181,7 +181,7 @@ def exec_gjf(auto_dir, monomer_name, params_dict,machine_type,isInterlayer,isTes
     with open(sh_path,'w') as f:
         f.writelines(cc_list)
     if not(isTest):
-        subprocess.run(['pjsub',sh_path])
+        subprocess.run(['qsub',sh_path])
     log_file_name = os.path.splitext(file_name)[0]+'.log'
     return log_file_name
     
