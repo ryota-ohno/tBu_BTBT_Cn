@@ -60,7 +60,8 @@ def listen(auto_dir,monomer_name,num_nodes,isTest):##args自体を引数に取�
                 params_dict=dict_matrix[i]
                 alreadyCalculated = check_calc_status(auto_dir,params_dict)
                 if not(alreadyCalculated):
-                    num_machine2=len(df_E[(df_E['status']=='InProgress')&(df_E['machine_type']=='2')])
+                    df_E_ = pd.read_csv(auto_csv)
+                    num_machine2=len(df_E_[(df_E_['status']=='InProgress')&(df_E_['machine_type']=='2')])
                     if num_machine2 <2:
                         machine_type='2'
                     else:
