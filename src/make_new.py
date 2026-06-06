@@ -130,12 +130,8 @@ def make_gjf_xyz(auto_dir,monomer_name,params_dict,isInterlayer):
     b =np.array([0,b_,0])
     
     monomer_array_i = get_monomer_xyzR(monomer_name,0,0,0,A2,A3, phi1,phi2)
-    if a_>b_:
-        monomer_array_p1 = get_monomer_xyzR(monomer_name,0,b_,2*z,A2,A3, phi1,phi2)
-        monomer_array_p2 = get_monomer_xyzR(monomer_name,0,-b_,-2*z,A2,A3, phi1,phi2)
-    else:
-        monomer_array_p1 = get_monomer_xyzR(monomer_name,a_,0,0,A2,A3, phi1,phi2)
-        monomer_array_p2 = get_monomer_xyzR(monomer_name,-a_,0,0,A2,A3, phi1,phi2)
+    monomer_array_p1 = get_monomer_xyzR(monomer_name,0,b_,2*z,A2,A3, phi1,phi2)
+    monomer_array_p2 = get_monomer_xyzR(monomer_name,a_,0,0,A2,A3, phi1,phi2)
     
     monomer_array_t1 = get_monomer_xyzR(monomer_name,a_/2,b_/2,z,A2,-A3,-phi1,-phi2)
     monomer_array_t2 = get_monomer_xyzR(monomer_name,a_/2,-b_/2,z,A2,-A3,-phi1,-phi2)
