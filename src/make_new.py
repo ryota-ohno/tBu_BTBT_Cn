@@ -50,9 +50,9 @@ def get_xyzR_lines(xyzR_array,file_description):
 # 実行ファイル作成
 def get_one_exe(file_name,machine_type):
     file_basename = os.path.splitext(file_name)[0]
-    if machine_type=='1':
+    if machine_type==1:
         group=1;core=40
-    elif machine_type=='2':
+    elif machine_type==2:
         group=2;core=52    
     cc_list=[
         '#!/bin/sh \n',
